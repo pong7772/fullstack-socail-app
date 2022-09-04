@@ -1,3 +1,4 @@
+![alt text]([http://url/to/img.png](https://i.ytimg.com/vi/_cM4j9_LfQk/maxresdefault.jpg))
 # Nuxt 3 Minimal Starter
 
 Look at the [nuxt 3 documentation](https://v3.nuxtjs.org) to learn more.
