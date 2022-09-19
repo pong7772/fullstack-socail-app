@@ -19,12 +19,12 @@
             </div>
           </div>
           <!-- Center sidebar -->
-          <!-- <main class="col-span-12 md:col-span-8 xl:col-span-6 bg-red-50">
-            <p>sflashf</p>
-          </main> -->
+          <main class="col-span-12 md:col-span-8 xl:col-span-6 bg-red-50">
+            <router-view />
+          </main>
 
           <!-- Right sidebar -->
-          <div class="bg-blue-500 md:block xl:col-span-4 md:col-span-3">
+          <div class="hidden md:block xl:col-span-4 md:col-span-3">
             <SidebarRight />
           </div>
         </div>
