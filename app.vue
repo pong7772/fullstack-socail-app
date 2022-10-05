@@ -7,9 +7,7 @@
             grid grid-cols-12
             mx-auto
             sm:px-6
-            lg:
-            max-w-7xl
-            lg:px-8 lg:gap-5
+            lg:max-w-7xl lg:px-8 lg:gap-5
           "
         >
           <!-- Left sidebar -->
@@ -19,7 +17,7 @@
             </div>
           </div>
           <!-- Center sidebar -->
-          <main class="col-span-12 md:col-span-8 xl:col-span-6 bg-red-50">
+          <main class="col-span-12 md:col-span-8 xl:col-span-6">
             <router-view />
           </main>
 
