@@ -6,17 +6,16 @@
       class="
         p-2
         my-2
-        hover:rounded-full hover:bg-blue-50
+        rounded-full
+        hover:bg-blue-50
         w-min
         dark:hover:bg-white/20
       "
       :class="deafaultTransitions"
     >
       <nuxt-link to="/">
-        <div>
-          <div class="w-8 h-8">
-            <LogoTwitter />
-          </div>
+        <div class="w-8 h-8">
+          <LogoTwitter />
         </div>
       </nuxt-link>
     </div>
