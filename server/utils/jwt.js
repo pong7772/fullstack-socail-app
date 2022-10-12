@@ -17,7 +17,7 @@ export const generateTokens =(user)=>{
     const accessToken = generateAccessTokens(user)
     const refreshToken = generateRefreshTokens(user)
     return{
-        accessToken: accessToken,
+        accessToken: accessToken, 
         refreshToken: refreshToken
     }
 }

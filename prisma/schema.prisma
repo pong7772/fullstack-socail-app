@@ -26,9 +26,8 @@ model User {
 }
 
 model RefreshToken {
-  id    String @id @default(auto()) @map("_id") @db.ObjectId
-  token String @unique
-
+  id       String   @id @default(auto()) @map("_id") @db.ObjectId
+  token    String   @unique
   createAt DateTime @default(now())
   updateAt DateTime @updatedAt
   userId   String   @db.ObjectId
