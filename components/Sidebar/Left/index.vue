@@ -16,6 +16,7 @@
       <nuxt-link to="/">
         <div class="w-8 h-8">
           <LogoTwitter />
+          <!-- <img src="../../../assets/authpage.png" /> -->
         </div>
       </nuxt-link>
     </div>

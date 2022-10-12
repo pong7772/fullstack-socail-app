@@ -1,7 +1,8 @@
 <template>
   <div :class="{ dark: darkMode }">
     <div class="bg-white dark:bg-dim-900">
-      <div class="min-h-full">
+      <div v-if="false" class="min-h-full">
+        <!-- App -->
         <div
           class="
             grid grid-cols-12
@@ -27,6 +28,7 @@
           </div>
         </div>
       </div>
+      <AuthPage v-else> </AuthPage>
     </div>
   </div>
 </template>
