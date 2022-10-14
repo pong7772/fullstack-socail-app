@@ -3,7 +3,7 @@ import jwt from 'jsonwebtoken'
 const generateAccessTokens = (user)=>{
 const config = useRuntimeConfig()
 return jwt.sign({
-    uerId: user.id
+    userId: user.id
 }, config.jwtAccessSecret, {expiresIn: '10m'})
 }
 
@@ -13,6 +13,23 @@ return jwt.sign({userId: user.id},config.jwtRefreshSecret,{
     expiresIn: '4h'
 })
 }
+export const decodeRefreshToken =(token)=>{
+    const config = useRuntimeConfig()
+    try {
+        return jwt.verify(token, config.jwtRefreshSecret)
+    } catch (error) {
+        return null;
+    }
+}
+export const decodeAccessToken =(token)=>{
+    const config = useRuntimeConfig()
+    try {
+        return jwt.verify(token, config.jwtAccessSecret)
+    } catch (error) {
+        return null;
+    }
+}
+
 export const generateTokens =(user)=>{
     const accessToken = generateAccessTokens(user)
     const refreshToken = generateRefreshTokens(user)
