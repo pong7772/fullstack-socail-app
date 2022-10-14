@@ -1,7 +1,7 @@
 <template>
   <div :class="{ dark: darkMode }">
     <div class="bg-white dark:bg-dim-900">
-      <div v-if="false" class="min-h-full">
+      <div v-if="user" class="min-h-full">
         <!-- App -->
         <div
           class="
@@ -34,5 +34,13 @@
 </template>
 
 <script setup>
+import useAuth from "./components/composables/useAuth";
+
 const darkMode = ref(!true);
+const { useAuthUser, initAuth } = useAuth();
+const user = useAuthUser();
+
+onBeforeMount(() => {
+  initAuth();
+});
 </script>
