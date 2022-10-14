@@ -1,7 +1,8 @@
 <template>
   <div :class="{ dark: darkMode }">
     <div class="bg-white dark:bg-dim-900">
-      <div v-if="user" class="min-h-full">
+      <LoadingPage v-if="isAuthLoading" />
+      <div v-else-if="user" class="min-h-full">
         <!-- App -->
         <div
           class="
@@ -37,7 +38,8 @@
 import useAuth from "./components/composables/useAuth";
 
 const darkMode = ref(!true);
-const { useAuthUser, initAuth } = useAuth();
+const { useAuthUser, initAuth, useAuthLoading } = useAuth();
+const isAuthLoading = useAuthLoading();
 const user = useAuthUser();
 
 onBeforeMount(() => {
