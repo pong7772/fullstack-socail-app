@@ -1,5 +1,5 @@
 
-<img align='right' src="https://i.ytimg.com/vi/_cM4j9_LfQk/maxresdefault.jpg" width="250">
+<img align='right' src="https://d20r2glx6euv0l.cloudfront.net/avatar/220f216eb4.jpg" width="250">
 # Nuxt 3 Minimal Starter
 
 Look at the [nuxt 3 documentation](https://v3.nuxtjs.org) to learn more.
