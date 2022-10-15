@@ -24,7 +24,7 @@ model User {
   updateAt     DateTime       @updatedAt
   refreshToken RefreshToken[]
   //tweets on user can have many tweet
-  Tweet        Tweet[]
+  tweet        Tweet[]
 }
 
 model RefreshToken {
@@ -37,17 +37,15 @@ model RefreshToken {
 }
 
 model Tweet {
-  id       String   @id @default(auto()) @map("_id") @db.ObjectId
-  text     String
-  createAt DateTime @default(now())
-  updateAt DateTime @updatedAt
-  //author
-  authorId String   @db.ObjectId
-  author   User     @relation(fields: [authorId], references: [id])
-
-  replyToId String? @db.ObjectId
-  replyTo   Tweet?  @relation("replies", fields: [replyToId], references: [id], onDelete: NoAction, onUpdate: NoAction)
-  replies   Tweet[] @relation("replies")
-
-  //MediaFiles
+  id        String   @id @default(auto()) @map("_id") @db.ObjectId
+  text      String
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  // Author
+  author    User     @relation(fields: [authorId], references: [id])
+  authorId  String   @db.ObjectId
+  replyToId String?  @db.ObjectId
+  replyTo   Tweet?   @relation("replies", fields: [replyToId], references: [id], onDelete: NoAction, onUpdate: NoAction)
+  replies   Tweet[]  @relation("replies")
+  // MediaFiles
 }
