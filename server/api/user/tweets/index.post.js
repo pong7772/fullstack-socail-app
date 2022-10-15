@@ -22,9 +22,10 @@ export default defineEventHandler(async(event)=>{
         authorId: userId,
 
     }
-     const tweet = await createTweet(tweetData)
+    //  const tweet = await createTweet(tweetData)
 
     return{
-        tweet: tweetTransformer(tweet)
+        // tweet: tweetTransformer(tweet)
+        files
     }
 })
