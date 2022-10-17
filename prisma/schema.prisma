@@ -25,6 +25,8 @@ model User {
   refreshToken RefreshToken[]
   //tweets on user can have many tweet
   tweet        Tweet[]
+  //media file
+  mediafile    MediaFile[]
 }
 
 model RefreshToken {
@@ -48,4 +50,24 @@ model Tweet {
   replyTo   Tweet?   @relation("replies", fields: [replyToId], references: [id], onDelete: NoAction, onUpdate: NoAction)
   replies   Tweet[]  @relation("replies")
   // MediaFiles
+
+  mediaFile MediaFile[]
+}
+
+model MediaFile {
+  id               String @id @default(auto()) @map("_id") @db.ObjectId
+  url              String
+  providerPublicId String
+
+  createAt DateTime @default(now())
+  updateAt DateTime @updatedAt
+
+  // User
+  userId String @db.ObjectId
+  user   User   @relation(fields: [userId], references: [id])
+
+  //tweets
+
+  tweetId String? @db.ObjectId
+  tweet   Tweet?  @relation(fields: [tweetId], references: [id])
 }
