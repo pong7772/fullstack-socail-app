@@ -1588,6 +1588,23 @@
   "resolved" "https://registry.npmjs.org/clone/-/clone-1.0.4.tgz"
   "version" "1.0.4"
 
+"cloudinary-core@^2.10.2":
+  "integrity" "sha512-Nt0Q5I2FtenmJghtC4YZ3MZZbGg1wLm84SsxcuVwZ83OyJqG9CNIGp86CiI6iDv3QobaqBUpOT7vg+HqY5HxEA=="
+  "resolved" "https://registry.npmjs.org/cloudinary-core/-/cloudinary-core-2.13.0.tgz"
+  "version" "2.13.0"
+
+"cloudinary@^1.32.0":
+  "integrity" "sha512-hbc5/ilOkwD49+Lucqze3z+2Tejc3YdH4tkI+y1Ciabi9Qh9MYcy4M3rYeDAYiMS/jIz5FfHOzx+JjVnPJxNAQ=="
+  "resolved" "https://registry.npmjs.org/cloudinary/-/cloudinary-1.32.0.tgz"
+  "version" "1.32.0"
+  dependencies:
+    "cloudinary-core" "^2.10.2"
+    "core-js" "^3.6.5"
+    "lodash" "^4.17.21"
+    "q" "^1.5.1"
+  optionalDependencies:
+    "proxy-agent" "^5.0.0"
+
 "cluster-key-slot@^1.1.0":
   "integrity" "sha512-2Nii8p3RwAPiFwsnZvukotvow2rIHM+yQ6ZcBXGHdniadkYGZYiGmkHJIbZPIV9nfv7m/U1IPMVVcAhoWFeklw=="
   "resolved" "https://registry.npmjs.org/cluster-key-slot/-/cluster-key-slot-1.1.0.tgz"
@@ -1723,6 +1740,11 @@
   dependencies:
     "depd" "~2.0.0"
     "keygrip" "~1.1.0"
+
+"core-js@^3.6.5":
+  "integrity" "sha512-nbm6eZSjm+ZuBQxCUPQKQCoUEfFOXjUZ8dTTyikyKaWrTYmAVbykQfwsKE5dBK88u3QCkCrzsx/PPlKfhsvgpw=="
+  "resolved" "https://registry.npmjs.org/core-js/-/core-js-3.25.5.tgz"
+  "version" "3.25.5"
 
 "core-util-is@~1.0.0":
   "integrity" "sha512-ZQBvi1DcpJ4GDqanjucZ2Hj3wEO5pZDS89BWbkcrvdxksJorwUDDZamX9ldFkp9aw2lmBDLgkObEA4DWNJ9FYQ=="
@@ -3347,7 +3369,7 @@
   "resolved" "https://registry.npmjs.org/lodash.uniq/-/lodash.uniq-4.5.0.tgz"
   "version" "4.5.0"
 
-"lodash@^4.17.14", "lodash@^4.17.21":
+"lodash@^4.17.14", "lodash@^4.17.21", "lodash@>=4.0":
   "integrity" "sha512-v2kDEe57lecTulaDIuNTPy3Ry4gLGJ6Z1O3vE1krgXZNrsQ+LFTGHVxVjcXPs17LhbZVGedAJv8XZ1tvj5FvSg=="
   "resolved" "https://registry.npmjs.org/lodash/-/lodash-4.17.21.tgz"
   "version" "4.17.21"
@@ -4380,6 +4402,11 @@
   "integrity" "sha512-XRsRjdf+j5ml+y/6GKHPZbrF/8p2Yga0JPtdqTIY2Xe5ohJPD9saDJJLPvp9+NSBprVvevdXZybnj2cv8OEd0A=="
   "resolved" "https://registry.npmjs.org/punycode/-/punycode-2.1.1.tgz"
   "version" "2.1.1"
+
+"q@^1.5.1":
+  "integrity" "sha512-kV/CThkXo6xyFEZUugw/+pIOywXcDbFYgSct5cT3gqlbkBE1SJdwy6UQoZvodiWF/ckQLZyDE/Bu1M6gVu5lVw=="
+  "resolved" "https://registry.npmjs.org/q/-/q-1.5.1.tgz"
+  "version" "1.5.1"
 
 "qs@6.9.3":
   "integrity" "sha512-EbZYNarm6138UKKq46tdx08Yo/q9ZhFoAXAI1meAFd2GtbRDhbZY2WQSICskT0c5q99aFzLG1D4nvTk9tqfXIw=="
