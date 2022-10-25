@@ -16,7 +16,7 @@
       </h2>
     </div>
     <div
-      class="flext items-center justify-center p-4 border-b"
+      class="flex items-center justify-center p-4 border-b"
       v-if="props.loading"
       :class="twitterBorderColor"
     >
