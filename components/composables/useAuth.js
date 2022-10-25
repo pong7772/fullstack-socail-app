@@ -37,6 +37,35 @@ const login = ({ username, password }) => {
             }
         })
     }
+    //     username,
+    //     email,
+    //     password,
+    //     name,
+    //    profileImage: "https://picsum.photos/200/200"
+    const register = ({ username, password, repeatPassword, email, name  }) => {
+        return new Promise(async (resolve, reject) => {
+            try {
+                const data = await $fetch('/api/auth/register', {
+                    method: 'POST',
+                    body: {
+                        username,
+                        email,
+                        password,
+                        repeatPassword,
+                        name,
+                        profileImage
+                    }
+                })
+
+                setToken(data.access_token)
+                setUser(data.user)
+
+                resolve(true)
+            } catch (error) {
+                reject(error)
+            }
+        })
+    }
 const refreshToken = () => {
         return new Promise(async (resolve, reject) => {
             try {
@@ -88,11 +117,27 @@ const getUser = () => {
             }
         })
     }
+    const logout = ()=>{
+        return new Promise(async (resolve, reject)=>{
+            try {
+                await useFetchApi('/api/auth/logout',{
+                    method: 'POST'
+                })
+                setToken(null)
+                setUser(null)
+                resolve()
+            } catch (error) {
+                reject(error)
+            }
+        })
+    }
     return {
         login,
         useAuthUser,
         initAuth,
         useAuthToken,
-        useAuthLoading
+        useAuthLoading,
+        logout,
+        register
     }
 }

@@ -286,6 +286,11 @@
   "resolved" "https://registry.npmjs.org/@csstools/selector-specificity/-/selector-specificity-2.0.2.tgz"
   "version" "2.0.2"
 
+"@headlessui/vue@^1.7.3":
+  "integrity" "sha512-Is4iakKts9u9E0+jEZNzoJpBjwq2SamwEIoEl2RlyYSu6Zco536GsPXaQEfg/o7Eyc1GUUlcL+dJd4Rt7qyf7A=="
+  "resolved" "https://registry.npmjs.org/@headlessui/vue/-/vue-1.7.3.tgz"
+  "version" "1.7.3"
+
 "@heroicons/vue@^2.0.11":
   "integrity" "sha512-nTfN4aZVCP8Xntt9Q9RvH+vDagFHA4zFCUge6oCdkBrELH1i6K9feubvnEMhRIYdwC+nWULqKyJP7iVoWkR6Eg=="
   "resolved" "https://registry.npmjs.org/@heroicons/vue/-/vue-2.0.11.tgz"
@@ -3548,6 +3553,11 @@
   dependencies:
     "minipass" "^3.0.0"
     "yallist" "^4.0.0"
+
+"mitt@^3.0.0":
+  "integrity" "sha512-7dX2/10ITVyqh4aOSVI9gdape+t9l2/8QxHrFmUXu4EEUpdlxl6RudZUPZoc+zuY2hk1j7XxVroIVIan/pD/SQ=="
+  "resolved" "https://registry.npmjs.org/mitt/-/mitt-3.0.0.tgz"
+  "version" "3.0.0"
 
 "mkdirp@^0.5.1", "mkdirp@^0.5.5", "mkdirp@^0.5.6":
   "integrity" "sha512-FP+p8RB8OWpF3YZBCrP5gtADmtXApB5AMLn+vdyA+PyxCjrCs00mjyUozssO33cwDeT3wNGdLxJ5M//YqtHAJw=="

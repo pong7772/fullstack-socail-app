@@ -1,7 +1,11 @@
 <template>
-  <div>
-    <div class="pt-5 space-y-6">
-      <h1>Login</h1>
+  <div class="w-full">
+    <div class="flex justify-center">
+      <div class="w-20 h-20">
+        <LogoTwitter />
+      </div>
+    </div>
+    <div class="pt-5 space-y-6 mb-2">
       <UIInput
         label="Username"
         placeholder="username"
@@ -13,9 +17,15 @@
         type="password"
         v-model="data.password"
       />
-      <div>
-        <button @click="handleLogin">Submit</button>
-      </div>
+      <UIButton @click="handleLogin" liquid :disabled="isButtonDisable">
+        Login
+      </UIButton>
+    </div>
+    <div class="flex justify-center items-center pt-5">
+      <span class="px-3 mx-3 text-lg text-gray-600"
+        >if you don't have accout</span
+      >
+      <UIButton> Register </UIButton>
     </div>
   </div>
 </template>
@@ -27,6 +37,7 @@ const data = reactive({
   username: "",
   loading: false,
 });
+const isSignUp = ref(false);
 async function handleLogin() {
   const { login } = useAuth();
   data.loading = true;
@@ -42,4 +53,7 @@ async function handleLogin() {
   }
   //   alert(JSON.stringify(data));
 }
+const isButtonDisable = computed(() => {
+  return !data.username || !data.password || data.loading;
+});
 </script>

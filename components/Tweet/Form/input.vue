@@ -21,7 +21,7 @@
             dark:text.white
             focus:ring-0
           "
-          placeholder="What's on your mind?"
+          :placeholder="props.placeholder"
         >
         </textarea>
       </div>
@@ -163,7 +163,7 @@
       <div class="ml-auto">
         <!-- <button @click="handleFormSubmit">Tweet</button> -->
         <UIButton size="sm" :disabled="isDisable" @onClick="handleFormSubmit">
-          <span class="font-bold"> Tweet </span>
+          <span class="font-bold"> Public </span>
         </UIButton>
       </div>
     </div>
@@ -177,6 +177,10 @@ import UIInput from "~~/components/Auth/UIInput.vue";
 const props = defineProps({
   user: {
     type: Object,
+    required: true,
+  },
+  placeholder: {
+    type: String,
     required: true,
   },
 });

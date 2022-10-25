@@ -13,12 +13,10 @@
       "
       :class="deafaultTransitions"
     >
-      <nuxt-link to="/">
-        <div class="w-8 h-8">
-          <LogoTwitter />
-          <!-- <img src="../../../assets/authpage.png" /> -->
-        </div>
-      </nuxt-link>
+      <div @click="navigateTo('/')" class="w-20 h-20">
+        <LogoTwitter />
+        <!-- <img src="../../../assets/authpage.png" /> -->
+      </div>
     </div>
     <!-- it store the icon and name of left side  -->
     <div class="mt-2 space-y-3">
@@ -78,16 +76,81 @@
         <template v-slot:name> More </template>
       </SidebarLeftTab>
       <div class="hidden xl:block">
-        <UIButton liquid size="lg">
-          <span class="font-bold">Tweet</span>
+        <UIButton liquid size="lg" @on-click="emits('onTweet')">
+          <span class="font-bold">Post Your Feel</span>
         </UIButton>
       </div>
       <div class="block xl:hidden">
-        <UIButton>
+        <UIButton @on-click="emits('onTweet')">
           <div class="w-6 h-6 font-bold">
             <PencilIcon />
           </div>
         </UIButton>
+      </div>
+    </div>
+
+    <div
+      class="
+        flex flex-col
+        items-center
+        justify-center
+        px-2
+        py-2
+        mx-auto
+        mt-auto
+        mb-5
+        rounded-full
+        cursor-pointer
+        w-14
+        xl:w-full
+        hover:bg-gray-100
+        dark:hover:bg-dim-700
+      "
+      :class="deafaultTransitions"
+    >
+      <div class="flex flex-row">
+        <img
+          :src="props.user.profileImage"
+          alt=""
+          class="w-10 h-10 rounded-full"
+        />
+        <div class="flex-col hidden ml-2 xl:block">
+          <div
+            class="
+              item-center
+              flex
+              justify-between
+              text-sm
+              font-bold
+              text-gray-600
+              dark:text-white
+            "
+          >
+            {{ user.name }}
+          </div>
+
+          <p class="text-sm text-gray-500">
+            {{ user.handle }}
+          </p>
+        </div>
+      </div>
+      <!-- icon -->
+      <div class="hidden ml-auto xl:block">
+        <div class="overflow-hidden">
+          <UIButton
+            class="
+              item-center
+              flex
+              justify-between
+              text-sm
+              font-bold
+              text-gray-800
+              dark:text-white
+            "
+            @click="emits('onLogout')"
+            >logout</UIButton
+          >
+        </div>
       </div>
     </div>
   </div>
@@ -108,4 +171,12 @@ import {
 } from "@heroicons/vue/24/outline";
 import { HomeIcon } from "@heroicons/vue/24/solid";
 const { deafaultTransitions } = useTailwindConfig();
+const emits = defineEmits(["onTweet", "onLogout"]);
+
+const props = defineProps({
+  user: {
+    type: Object,
+    required: true,
+  },
+});
 </script>
