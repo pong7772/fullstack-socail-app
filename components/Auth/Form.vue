@@ -3,6 +3,7 @@
     <div class="flex justify-center">
       <div class="w-20 h-20">
         <LogoTwitter />
+        <p> ❤️username : pong & pass: password👨🏻‍💻</p>
       </div>
     </div>
     <div class="pt-5 space-y-6 mb-2">
