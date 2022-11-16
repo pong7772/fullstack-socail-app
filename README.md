@@ -2,6 +2,7 @@
 <img align='right' src="https://d20r2glx6euv0l.cloudfront.net/avatar/220f216eb4.jpg" width="250">
 # Nuxt 3 Minimal Starter
 
+if you want to log in this project just Use : username: pong & password: password
 Look at the [nuxt 3 documentation](https://v3.nuxtjs.org) to learn more.
 
 ## Setup
