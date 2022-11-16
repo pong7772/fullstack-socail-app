@@ -22,9 +22,7 @@
       </UIButton>
     </div>
     <div class="flex justify-center items-center pt-5">
-      <span class="px-3 mx-3 text-lg text-gray-600"
-        >❤️username : pong & pass: password👨🏻‍💻</span
-      >
+      <p> ❤️username : pong & pass: password👨🏻‍💻</p>
     </div>
   </div>
 </template>
