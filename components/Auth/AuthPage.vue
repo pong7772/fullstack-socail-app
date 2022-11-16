@@ -6,7 +6,6 @@
         src="../../assets/authpage.png"
       />
     </div>
-    <p>username : pong & pass: password</p>
     <div
       class="
         flex flex-col
