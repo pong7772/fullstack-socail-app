@@ -3,7 +3,6 @@
     <div class="flex justify-center">
       <div class="w-20 h-20">
         <LogoTwitter />
-        <p> ❤️username : pong & pass: password👨🏻‍💻</p>
       </div>
     </div>
     <div class="pt-5 space-y-6 mb-2">
@@ -24,9 +23,8 @@
     </div>
     <div class="flex justify-center items-center pt-5">
       <span class="px-3 mx-3 text-lg text-gray-600"
-        >if you don't have accout</span
+        >❤️username : pong & pass: password👨🏻‍💻</span
       >
-      <UIButton> Register </UIButton>
     </div>
   </div>
 </template>
